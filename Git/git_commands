@@ -1,0 +1,18 @@
+$ git config --list      // List the current configuration of git CLI
+$ git config --global --user.name "<user name>"  // Set username
+$ git config --global --user.email "xyz@gmail.com"    // set email ID
+$ git init      // Initialized a empty git repository
+$ git status            // Show status of the git repo
+$ git add <file name>      // add files to staging area
+$ git add .              // add all modified/untracked files to staging area from current directory
+$ git commit -m "commit message"        // commit all staged files
+$ git restore --staged <file name>      // Remove file from staging area
+$ git rm                   // delete/remove file from git repo
+
+## How to restore a deleted file from git repo
+$ git restore --staged <file name>
+$ git restore <file name> 
+----------------------------------------------------------------------------------
+$ git log                   // show git logs
+$ git log --oneline        // show only commit ID and commit message on single line
+$ git log -n                // show first n number of commits
