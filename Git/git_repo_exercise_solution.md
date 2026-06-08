@@ -1,4 +1,3 @@
-````markdown
 # GitHub Basics Exercise
 
 ## Objective
