@@ -238,4 +238,3 @@ You should have:
 - A `main` branch containing the final merged content.
 - Two feature branches: `foods` and `movies`.
 - Experience creating commits, pushing branches, merging changes, and resolving merge conflicts.
-````
