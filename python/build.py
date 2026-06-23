@@ -1,2 +1,3 @@
+import time
 print("building project...")
-sleep 30
+time.sleep(30)
