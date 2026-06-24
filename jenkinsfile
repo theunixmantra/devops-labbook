@@ -1,0 +1,45 @@
+pipeline {
+agent any
+
+stages {
+
+    stage('Build') {
+        steps {
+            echo 'Building the application...'
+
+            sh '''
+            mkdir -p build
+            echo "Application Build Successful" > build/app.txt
+            '''
+        }
+    }
+
+    stage('Test') {
+        steps {
+            echo 'Running tests...'
+
+            sh '''
+            if [ -f build/app.txt ]; then
+                echo "Test Passed"
+            else
+                echo "Test Failed"
+                exit 1
+            fi
+            '''
+        }
+    }
+
+    stage('Deploy') {
+        steps {
+            echo 'Deploying application...'
+
+            sh '''
+            mkdir -p /tmp/deploy
+            cp build/app.txt /tmp/deploy/
+            echo "Deployment Successful"
+            '''
+        }
+    }
+}
+
+}
